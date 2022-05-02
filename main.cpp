@@ -11,7 +11,7 @@ void HanoiTower(int count, char fromArea, char middleArea, char toArea)
 	else
 	{
 		HanoiTower(count - 1, fromArea, toArea, middleArea);
-		cout << "원반 " << count <<"를 " << fromArea << "에서 " << toArea << "로 이동" << endl;
+		cout << "원반 " << count << "를 " << fromArea << "에서 " << toArea << "로 이동" << endl;
 		HanoiTower(count - 1, middleArea, fromArea, toArea);
 
 	}
@@ -19,6 +19,8 @@ void HanoiTower(int count, char fromArea, char middleArea, char toArea)
 
 int main(void)
 {
-	HanoiTower(3, 'A', 'B', 'C');
+	int count;
+	cin >> count;
+	HanoiTower(count, 'A', 'B', 'C');
 	return 0;
 }
